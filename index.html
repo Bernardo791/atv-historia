@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Expansão Europeia — Grandes Navegações dos Séculos XV e XVI</title>
+<meta name="description" content="Site educacional completo sobre a Expansão Marítima Europeia: causas, pioneirismo português, descobrimentos espanhóis, tecnologias, consequências e personagens." />
+<style>
+  :root{
+    --azul-oceano:#0b3d62;
+    --azul-profundo:#072a47;
+    --areia:#f4ead5;
+    --pergaminho:#fbf6e9;
+    --ouro:#c8932b;
+    --vermelho:#8b1e1e;
+    --texto:#1f2937;
+    --muted:#5b6b7a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family: Georgia, "Times New Roman", serif;
+    color:var(--texto);
+    background:var(--pergaminho);
+    line-height:1.7;
+  }
+  header.hero{
+    position:relative;
+    background:
+      linear-gradient(rgba(7,42,71,.78),rgba(7,42,71,.85)),
+      url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Cantino_planisphere_%281502%29.jpg/1600px-Cantino_planisphere_%281502%29.jpg") center/cover;
+    color:var(--areia);
+    padding:6rem 1.5rem 5rem;
+    text-align:center;
+    border-bottom:6px solid var(--ouro);
+  }
+  header.hero h1{
+    font-size:clamp(2rem,5vw,3.8rem);
+    letter-spacing:1px;
+    text-shadow:2px 2px 6px #000;
+    margin-bottom:1rem;
+  }
+  header.hero p.subtitle{
+    font-style:italic;
+    font-size:clamp(1rem,2vw,1.3rem);
+    max-width:760px;
+    margin:0 auto 2rem;
+  }
+  nav.principal{
+    background:var(--azul-profundo);
+    position:sticky;top:0;z-index:50;
+    border-bottom:3px solid var(--ouro);
+  }
+  nav.principal ul{
+    list-style:none;display:flex;flex-wrap:wrap;justify-content:center;
+    max-width:1200px;margin:0 auto;
+  }
+  nav.principal a{
+    display:block;color:var(--areia);text-decoration:none;
+    padding:.9rem 1.2rem;font-family:Arial,sans-serif;font-size:.9rem;
+    text-transform:uppercase;letter-spacing:1px;transition:.2s;
+  }
+  nav.principal a:hover{background:var(--ouro);color:var(--azul-profundo)}
+  main{max-width:1100px;margin:0 auto;padding:3rem 1.5rem}
+  section{margin-bottom:4rem;scroll-margin-top:80px}
+  section h2{
+    font-size:2rem;color:var(--azul-oceano);
+    border-bottom:3px double var(--ouro);
+    padding-bottom:.5rem;margin-bottom:1.5rem;
+    display:flex;align-items:center;gap:.6rem;
+  }
+  section h2::before{content:"⚓";color:var(--ouro);font-size:1.5rem}
+  section h3{
+    color:var(--vermelho);margin:1.8rem 0 .8rem;font-size:1.3rem;
+  }
+  section p{margin-bottom:1rem;text-align:justify}
+  .destaque{
+    background:#fff7e0;border-left:6px solid var(--ouro);
+    padding:1rem 1.2rem;margin:1.2rem 0;font-style:italic;
+    border-radius:0 6px 6px 0;
+  }
+  .grid{display:grid;gap:1.2rem}
+  .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .card{
+    background:#fff;border:1px solid #e5dcc2;border-radius:8px;
+    padding:1.2rem;box-shadow:0 2px 6px rgba(0,0,0,.06);
+  }
+  .card h4{color:var(--azul-oceano);margin-bottom:.5rem;font-size:1.1rem}
+  ul.lista{margin:.5rem 0 1rem 1.5rem}
+  ul.lista li{margin-bottom:.4rem}
+  table{
+    width:100%;border-collapse:collapse;margin:1rem 0;background:#fff;
+    box-shadow:0 2px 5px rgba(0,0,0,.05);font-size:.95rem;
+  }
+  table th,table td{padding:.7rem .9rem;border:1px solid #d8cfb5;text-align:left}
+  table th{background:var(--azul-oceano);color:var(--areia)}
+  table tr:nth-child(even) td{background:#faf3df}
+  .timeline{position:relative;margin:2rem 0;padding-left:2rem;border-left:3px solid var(--ouro)}
+  .timeline .evento{margin-bottom:1.4rem;position:relative}
+  .timeline .evento::before{
+    content:"";position:absolute;left:-2.55rem;top:.4rem;
+    width:14px;height:14px;background:var(--vermelho);border-radius:50%;
+    border:3px solid var(--pergaminho);
+  }
+  .timeline .ano{font-weight:bold;color:var(--vermelho);font-size:1.05rem}
+  figure{margin:1.5rem 0;text-align:center}
+  figure img{max-width:100%;height:auto;border:4px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.2);border-radius:4px}
+  figcaption{font-size:.85rem;color:var(--muted);margin-top:.4rem;font-style:italic}
+  footer{
+    background:var(--azul-profundo);color:var(--areia);
+    text-align:center;padding:2.5rem 1rem;margin-top:3rem;
+    border-top:6px solid var(--ouro);
+  }
+  footer p{margin-bottom:.5rem}
+  .citacao{
+    background:var(--azul-oceano);color:var(--areia);
+    padding:1.5rem;border-radius:8px;font-size:1.1rem;font-style:italic;
+    text-align:center;margin:2rem 0;position:relative;
+  }
+  .citacao::before{content:"“";font-size:4rem;position:absolute;top:-10px;left:15px;color:var(--ouro);font-family:Georgia}
+  .citacao cite{display:block;margin-top:.7rem;font-size:.9rem;color:var(--areia);opacity:.85}
+  @media(max-width:600px){
+    nav.principal a{padding:.6rem .8rem;font-size:.75rem}
+    header.hero{padding:4rem 1rem 3rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>A Expansão Marítima Europeia</h1>
+  <p class="subtitle">Séculos XV e XVI — A era das Grandes Navegações que conectou continentes, derrubou impérios e redesenhou o mapa do mundo.</p>
+</header>
+
+<nav class="principal">
+  <ul>
+    <li><a href="#introducao">Introdução</a></li>
+    <li><a href="#causas">Causas</a></li>
+    <li><a href="#pioneirismo">Pioneirismo Português</a></li>
+    <li><a href="#espanha">Espanha</a></li>
+    <li><a href="#tecnologia">Tecnologia</a></li>
+    <li><a href="#tratados">Tratados</a></li>
+    <li><a href="#cronologia">Cronologia</a></li>
+    <li><a href="#personagens">Personagens</a></li>
+    <li><a href="#consequencias">Consequências</a></li>
+    <li><a href="#outros">Outros Países</a></li>
+    <li><a href="#legado">Legado</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="introducao">
+  <h2>Introdução</h2>
+  <p>A <strong>Expansão Marítima Europeia</strong>, também chamada de <strong>Grandes Navegações</strong> ou <strong>Era dos Descobrimentos</strong>, foi o conjunto de viagens transoceânicas empreendidas por nações europeias entre o início do século XV e o fim do século XVI. Esse movimento histórico colocou em contato direto e permanente os quatro continentes habitados, inaugurando o que muitos historiadores chamam de <em>primeira globalização</em>.</p>
+  <p>Mais do que uma aventura geográfica, a Expansão Europeia foi um fenômeno econômico, político, religioso, científico e cultural de proporções inéditas. Ela marca a transição entre a <strong>Idade Média</strong> e a <strong>Idade Moderna</strong>, e seus efeitos — positivos e devastadores — moldam o mundo até hoje.</p>
+  <div class="destaque">
+    “Antes das Grandes Navegações havia mundos; depois delas, passou a haver <strong>um</strong> mundo — interligado, desigual e em conflito.”
+  </div>
+</section>
+
+<section id="causas">
+  <h2>Causas da Expansão</h2>
+  <p>A expansão marítima não foi resultado de um único fator, mas da convergência de transformações econômicas, políticas, religiosas e culturais que vinham se acumulando desde o final da Idade Média.</p>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h4>1. Crise do Feudalismo</h4>
+      <p>A peste negra (1348), as guerras e a queda demográfica desorganizaram o sistema feudal, abrindo espaço para o avanço da economia mercantil e a busca de novas fontes de riqueza.</p>
+    </div>
+    <div class="card">
+      <h4>2. Renascimento Comercial e Urbano</h4>
+      <p>Cidades, burgueses e companhias mercantis precisavam de metais preciosos, mercados consumidores e rotas diretas para o Oriente.</p>
+    </div>
+    <div class="card">
+      <h4>3. Bloqueio Otomano</h4>
+      <p>Com a tomada de Constantinopla pelos turcos otomanos em <strong>1453</strong>, o comércio terrestre com a Ásia ficou encarecido e perigoso, motivando a busca por rotas marítimas alternativas.</p>
+    </div>
+    <div class="card">
+      <h4>4. Centralização Monárquica</h4>
+      <p>Reinos como Portugal e Castela já contavam com Estados nacionais fortes, capazes de financiar e organizar grandes empreendimentos marítimos.</p>
+    </div>
+    <div class="card">
+      <h4>5. Motivos Religiosos</h4>
+      <p>O desejo de expandir o cristianismo, combater os muçulmanos e encontrar o lendário reino cristão do <em>Preste João</em> na África ou Ásia mobilizou reis e cavaleiros.</p>
+    </div>
+    <div class="card">
+      <h4>6. Avanços Técnicos e Científicos</h4>
+      <p>Bússola, astrolábio, caravela, cartas portulanas e o conhecimento dos ventos atlânticos tornaram tecnicamente possível navegar em mar aberto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pioneirismo">
+  <h2>O Pioneirismo Português</h2>
+  <p>Portugal foi a primeira nação europeia a lançar-se sistematicamente ao mar. Esse pioneirismo não foi acidental: resultou de um conjunto único de condições favoráveis.</p>
+
+  <h3>Por que Portugal foi o primeiro?</h3>
+  <ul class="lista">
+    <li><strong>Posição geográfica privilegiada</strong>: voltado para o Atlântico, fora do Mediterrâneo dominado por Veneza e Gênova.</li>
+    <li><strong>Unificação política precoce</strong>: o Estado nacional português consolidou-se ainda no século XIII, com a Reconquista concluída em 1249.</li>
+    <li><strong>Revolução de Avis (1383–1385)</strong>: a ascensão de D. João I fortaleceu a aliança entre a monarquia e a burguesia mercantil de Lisboa e Porto, que financiou as navegações.</li>
+    <li><strong>Tradição marítima e pesqueira</strong> consolidada nos séculos anteriores.</li>
+    <li><strong>Escola de Sagres</strong>: centro de estudos náuticos atribuído ao <strong>Infante D. Henrique, o Navegador</strong>, que reuniu cartógrafos, astrônomos e pilotos.</li>
+  </ul>
+
+  <h3>A Conquista de Ceuta (1415) — o marco inicial</h3>
+  <p>A tomada da cidade norte-africana de <strong>Ceuta</strong> em 1415 é considerada o ponto de partida oficial da expansão portuguesa. Ceuta era um entreposto estratégico do comércio transaariano de ouro e escravos.</p>
+
+  <h3>O périplo africano</h3>
+  <p>Ao longo do século XV, os portugueses contornaram a costa africana em etapas sucessivas, sempre patrocinados pela Coroa:</p>
+  <ul class="lista">
+    <li><strong>1419</strong> — Madeira</li>
+    <li><strong>1427</strong> — Açores</li>
+    <li><strong>1434</strong> — Gil Eanes ultrapassa o temido <em>Cabo Bojador</em></li>
+    <li><strong>1488</strong> — Bartolomeu Dias contorna o <em>Cabo das Tormentas</em>, rebatizado <em>Cabo da Boa Esperança</em></li>
+    <li><strong>1498</strong> — Vasco da Gama chega a Calicute, na Índia</li>
+    <li><strong>1500</strong> — Pedro Álvares Cabral chega ao Brasil</li>
+  </ul>
+</section>
+
+<section id="espanha">
+  <h2>A Expansão Espanhola</h2>
+  <p>Enquanto Portugal contornava a África, a Espanha — formada em 1469 com a união dinástica de <strong>Fernando de Aragão</strong> e <strong>Isabel de Castela</strong> — apostou em uma rota oeste pelo Atlântico, seguindo a proposta do navegador genovês <strong>Cristóvão Colombo</strong>.</p>
+
+  <h3>1492 — um ano decisivo</h3>
+  <ul class="lista">
+    <li>Conclusão da <strong>Reconquista</strong> com a tomada de Granada, último reduto muçulmano da Península Ibérica.</li>
+    <li>Expulsão dos judeus não convertidos.</li>
+    <li><strong>12 de outubro</strong>: Colombo desembarca na ilha de <em>Guanahani</em> (atual San Salvador, nas Bahamas), acreditando ter chegado às Índias.</li>
+  </ul>
+
+  <h3>A conquista da América</h3>
+  <p>Em poucas décadas, os espanhóis destruíram dois dos maiores impérios pré-colombianos:</p>
+  <ul class="lista">
+    <li><strong>Império Asteca</strong> (México) — conquistado por <strong>Hernán Cortés</strong> entre 1519 e 1521.</li>
+    <li><strong>Império Inca</strong> (Peru) — conquistado por <strong>Francisco Pizarro</strong> entre 1531 e 1533.</li>
+  </ul>
+
+  <h3>A primeira circum-navegação (1519–1522)</h3>
+  <p>A expedição liderada pelo português <strong>Fernão de Magalhães</strong> a serviço da Espanha partiu com 5 navios e cerca de 240 homens. Após a morte de Magalhães nas Filipinas (1521), o comando passou a <strong>Juan Sebastián Elcano</strong>, que retornou à Espanha em 1522 com apenas <strong>18 sobreviventes</strong> e uma única nau, a <em>Victoria</em>. Foi a prova definitiva de que a Terra é redonda e de que os oceanos são conectados.</p>
+</section>
+
+<section id="tecnologia">
+  <h2>Tecnologia e Conhecimento Náutico</h2>
+  <p>As Grandes Navegações só foram possíveis graças a uma verdadeira <strong>revolução técnica</strong>, resultado da fusão entre saberes árabes, chineses, judaicos e europeus.</p>
+
+  <div class="grid cols-3">
+    <div class="card"><h4>Caravela</h4><p>Embarcação leve e veloz, com velas latinas (triangulares) que permitiam navegar contra o vento (bolinar).</p></div>
+    <div class="card"><h4>Nau</h4><p>Maior e mais robusta, usada em viagens de longa distância e transporte de cargas valiosas.</p></div>
+    <div class="card"><h4>Bússola</h4><p>De origem chinesa, indicava o norte magnético em qualquer condição climática.</p></div>
+    <div class="card"><h4>Astrolábio</h4><p>Aperfeiçoado pelos árabes, calculava a latitude pela altura do Sol ou das estrelas.</p></div>
+    <div class="card"><h4>Quadrante</h4><p>Instrumento mais simples que o astrolábio, também usado para medir alturas celestes.</p></div>
+    <div class="card"><h4>Cartas Portulanas</h4><p>Mapas detalhados com rotas, portos, ventos e correntes marítimas.</p></div>
+  </div>
+</section>
+
+<section id="tratados">
+  <h2>Tratados de Partilha do Mundo</h2>
+  <p>A rivalidade entre Portugal e Espanha exigiu acordos diplomáticos mediados pelo Papa, que dividiram literalmente o globo em duas zonas de exploração.</p>
+
+  <table>
+    <thead><tr><th>Tratado</th><th>Ano</th><th>Conteúdo principal</th></tr></thead>
+    <tbody>
+      <tr><td>Bula <em>Inter Coetera</em></td><td>1493</td><td>O Papa Alexandre VI traça uma linha imaginária 100 léguas a oeste de Cabo Verde, favorecendo a Espanha.</td></tr>
+      <tr><td><strong>Tratado de Tordesilhas</strong></td><td>1494</td><td>Renegociado entre Portugal e Espanha: linha movida para 370 léguas a oeste de Cabo Verde — o que garantiria a Portugal o futuro território do Brasil.</td></tr>
+      <tr><td>Tratado de Saragoça</td><td>1529</td><td>Partilha do Oceano Pacífico e definição das fronteiras na Ásia (Filipinas para a Espanha; Molucas para Portugal).</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="cronologia">
+  <h2>Cronologia das Grandes Navegações</h2>
+  <div class="timeline">
+    <div class="evento"><div class="ano">1415</div>Portugal conquista Ceuta no norte da África.</div>
+    <div class="evento"><div class="ano">1434</div>Gil Eanes ultrapassa o Cabo Bojador.</div>
+    <div class="evento"><div class="ano">1453</div>Queda de Constantinopla — fim do Império Bizantino.</div>
+    <div class="evento"><div class="ano">1488</div>Bartolomeu Dias contorna o Cabo da Boa Esperança.</div>
+    <div class="evento"><div class="ano">1492</div>Cristóvão Colombo chega à América a serviço da Espanha.</div>
+    <div class="evento"><div class="ano">1494</div>Assinatura do Tratado de Tordesilhas.</div>
+    <div class="evento"><div class="ano">1498</div>Vasco da Gama chega à Índia por mar.</div>
+    <div class="evento"><div class="ano">1500</div>Pedro Álvares Cabral aporta no Brasil.</div>
+    <div class="evento"><div class="ano">1519–1522</div>Primeira circum-navegação do globo (Magalhães e Elcano).</div>
+    <div class="evento"><div class="ano">1521</div>Hernán Cortés destrói o Império Asteca.</div>
+    <div class="evento"><div class="ano">1533</div>Francisco Pizarro destrói o Império Inca.</div>
+    <div class="evento"><div class="ano">1607</div>Fundação de Jamestown — início da colonização inglesa na América do Norte.</div>
+  </div>
+</section>
+
+<section id="personagens">
+  <h2>Principais Personagens</h2>
+  <div class="grid cols-2">
+    <div class="card"><h4>Infante D. Henrique (1394–1460)</h4><p>"O Navegador". Patrono das navegações portuguesas e idealizador da Escola de Sagres.</p></div>
+    <div class="card"><h4>Bartolomeu Dias (c. 1450–1500)</h4><p>Primeiro europeu a contornar o extremo sul da África (1488).</p></div>
+    <div class="card"><h4>Vasco da Gama (c. 1469–1524)</h4><p>Abriu a rota marítima para a Índia, chegando a Calicute em 1498.</p></div>
+    <div class="card"><h4>Pedro Álvares Cabral (1467–1520)</h4><p>Comandante da frota que chegou ao Brasil em 22 de abril de 1500.</p></div>
+    <div class="card"><h4>Cristóvão Colombo (1451–1506)</h4><p>Navegador genovês a serviço da Espanha; chegou à América em 1492.</p></div>
+    <div class="card"><h4>Fernão de Magalhães (1480–1521)</h4><p>Liderou a primeira expedição de circum-navegação. Morreu nas Filipinas.</p></div>
+    <div class="card"><h4>Hernán Cortés (1485–1547)</h4><p>Conquistador espanhol do Império Asteca.</p></div>
+    <div class="card"><h4>Francisco Pizarro (1478–1541)</h4><p>Conquistador espanhol do Império Inca.</p></div>
+    <div class="card"><h4>Américo Vespúcio (1454–1512)</h4><p>Navegador florentino que percebeu tratar-se de um Novo Mundo — daí o nome <em>América</em>.</p></div>
+  </div>
+</section>
+
+<section id="consequencias">
+  <h2>Consequências da Expansão Europeia</h2>
+
+  <h3>Consequências Econômicas</h3>
+  <ul class="lista">
+    <li>Deslocamento do eixo econômico do <strong>Mediterrâneo para o Atlântico</strong>.</li>
+    <li>Surgimento do <strong>capitalismo comercial</strong> e do sistema colonial mercantilista.</li>
+    <li>Influxo maciço de metais preciosos (ouro e prata) — <em>Revolução dos Preços</em> na Europa.</li>
+    <li>Formação de grandes companhias de comércio e bolsas de valores (Antuérpia, Amsterdã).</li>
+    <li>Início do <strong>tráfico transatlântico de africanos escravizados</strong>, que duraria mais de 350 anos.</li>
+  </ul>
+
+  <h3>Consequências Políticas</h3>
+  <ul class="lista">
+    <li>Fortalecimento das monarquias absolutistas ibéricas.</li>
+    <li>Formação dos primeiros impérios coloniais transcontinentais.</li>
+    <li>Início das rivalidades imperiais que marcariam toda a Idade Moderna.</li>
+  </ul>
+
+  <h3>Consequências Culturais e Científicas</h3>
+  <ul class="lista">
+    <li>Ampliação do conhecimento geográfico, botânico, zoológico e astronômico.</li>
+    <li>Confirmação da esfericidade da Terra e da existência de um Novo Mundo.</li>
+    <li>Encontro — e choque — entre culturas europeias, africanas, ameríndias e asiáticas.</li>
+    <li>Difusão do cristianismo, em especial do catolicismo, em escala global.</li>
+  </ul>
+
+  <h3>Consequências Demográficas e Ecológicas — o "Intercâmbio Colombiano"</h3>
+  <p>O contato entre os dois lados do Atlântico provocou trocas biológicas que transformaram o planeta:</p>
+  <table>
+    <thead><tr><th>Da Europa/África para a América</th><th>Da América para a Europa/África</th></tr></thead>
+    <tbody>
+      <tr><td>Cavalo, boi, porco, ovelha, galinha</td><td>Milho, batata, mandioca, tomate, cacau</td></tr>
+      <tr><td>Trigo, cana-de-açúcar, café</td><td>Tabaco, abacaxi, pimenta, feijão</td></tr>
+      <tr><td>Varíola, sarampo, gripe, tifo</td><td>Sífilis (segundo várias hipóteses)</td></tr>
+    </tbody>
+  </table>
+  <p>As <strong>epidemias trazidas pelos europeus</strong> dizimaram entre 60% e 90% das populações indígenas das Américas em apenas algumas décadas — um dos maiores colapsos demográficos da história humana.</p>
+
+  <h3>Consequências Sociais</h3>
+  <ul class="lista">
+    <li>Destruição de sociedades indígenas e africanas inteiras.</li>
+    <li>Surgimento de sociedades coloniais multiétnicas e profundamente desiguais.</li>
+    <li>Consolidação do racismo moderno como ideologia justificadora da escravidão e da colonização.</li>
+  </ul>
+
+  <div class="citacao">
+    A Expansão Europeia foi, ao mesmo tempo, uma das maiores epopeias técnico-científicas da humanidade e uma das maiores tragédias humanitárias de todos os tempos.
+    <cite>— Síntese historiográfica contemporânea</cite>
+  </div>
+</section>
+
+<section id="outros">
+  <h2>A Entrada de Outros Países</h2>
+  <p>O monopólio ibérico durou pouco. A partir do século XVI, outras potências europeias romperam o Tratado de Tordesilhas e disputaram colônias, rotas e mercados.</p>
+
+  <div class="grid cols-2">
+    <div class="card"><h4>Inglaterra</h4><p>John Cabot chegou à América do Norte em 1497. No século XVII, fundou colônias como Jamestown (1607) e Plymouth (1620), além de dominar parte da Índia e do Caribe.</p></div>
+    <div class="card"><h4>França</h4><p>Jacques Cartier explorou o rio São Lourenço (1534). Os franceses se estabeleceram no Canadá (Nova França), Louisiana e Caribe.</p></div>
+    <div class="card"><h4>Países Baixos (Holanda)</h4><p>Após sua independência da Espanha, fundaram a poderosa Companhia das Índias Orientais (1602) e ocuparam temporariamente o Nordeste brasileiro (1630–1654).</p></div>
+    <div class="card"><h4>Outros</h4><p>Suécia, Dinamarca e a Rússia também participaram, em menor escala, da expansão colonial e comercial.</p></div>
+  </div>
+</section>
+
+<section id="legado">
+  <h2>O Legado da Expansão Europeia</h2>
+  <p>Cinco séculos depois, as marcas da Expansão Europeia continuam estruturando o mundo contemporâneo:</p>
+  <ul class="lista">
+    <li>A divisão entre países <strong>centrais e periféricos</strong> da economia mundial tem suas raízes no sistema colonial.</li>
+    <li>A formação étnica e cultural das Américas, da África costeira e de partes da Ásia é produto direto desses encontros e choques.</li>
+    <li>O <strong>português</strong>, o <strong>espanhol</strong>, o <strong>inglês</strong> e o <strong>francês</strong> tornaram-se línguas globais por causa da colonização.</li>
+    <li>Religiões, culinárias, músicas e instituições políticas modernas refletem essa herança híbrida e conflituosa.</li>
+    <li>Os debates atuais sobre <strong>descolonização</strong>, <strong>reparação histórica</strong> e <strong>direitos dos povos originários</strong> são desdobramentos diretos desse processo.</li>
+  </ul>
+
+  <div class="destaque">
+    Estudar a Expansão Europeia é, portanto, estudar a <strong>origem do mundo moderno</strong> — com toda a sua riqueza e todas as suas feridas.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>Expansão Europeia — Séculos XV e XVI</strong></p>
+  <p><strong>Material de História</strong></p>
+  <p style="margin-top:1rem;font-size:.85rem;opacity:.8">© Produzido para fins didáticos. Imagens de domínio público (Wikimedia Commons).</p>
+</footer>
+
+</body>
+</html>
